@@ -2,7 +2,8 @@
 :set number
 :set shortmess+=|
 :set colorcolumn=80
-:color zenburn
+:set background=dark
+:color solarized
 :set gfn=Inconsolata\ Medium\ 12
 :set ai!
 :set list!

@@ -200,17 +200,29 @@ bindsym XF86AudioLowerVolume exec "$HOME/bin/notify_volume decrease"
 bindsym XF86AudioRaiseVolume exec "$HOME/bin/notify_volume increase"
 
 # Client colors
-# colorclass <border> <bg> <text> <indicator>
-client.focused $color04 $color04 $color07 $color02
-client.focused_inactive $background $background $color07 $color02
-client.unfocused $background $background $color12 $color10
-client.urgent $background $background $color02 $color10
+# colorclass			<border>	<bg>		<text>		<indicator>
+client.focused			$color04	$color04	$color07	$color02
+client.focused_inactive	$background	$background	$color07	$color02
+client.unfocused		$background	$background	$color12	$color10
+client.urgent			$background	$background	$color02	$color10
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	status_command i3status
+	status_command /home/ari/.i3/conky-i3bar
 	mode dock
+	font pango:Terminus 9
+	
+	colors {
+
+        background #000000
+        statusline #ffffff
+
+        focused_workspace  #ffffff #285577
+        active_workspace   #ffffff #333333
+        inactive_workspace #888888 #222222
+        urgent_workspace   #ffffff #900000
+	}
 }
 
 # other settings
@@ -235,6 +247,7 @@ focus_follows_mouse no
 
 # run stuff
 exec nitrogen --restore
-exec /home/young/Documents/mouse
-exec /home/young/Downloads/xflux -z 61801
+exec /home/ari/Documents/scripts/mouse
+exec /home/ari/Downloads/xflux -z 61801
 exec copyAgent
+exec conky

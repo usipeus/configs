@@ -246,6 +246,7 @@ focus_follows_mouse no
 # workspace 10 output xinerama-1
 
 # run stuff
+exec lxsession
 exec nitrogen --restore
 exec /home/ari/Documents/scripts/mouse
 exec /home/ari/Downloads/xflux -z 61801

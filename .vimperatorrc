@@ -1,0 +1,13 @@
+"3.8.2 (created: 2014/02/13 23:52:43)
+
+inoremap <C-a> <Insert><C-a><Insert>
+nnoremap ; :
+nnoremap : ;
+nnoremap <C-a> <Insert><C-a><Insert>
+nnoremap j <Down>
+nnoremap k <Up>
+set noautocomplete
+set tabnumbers
+source! /home/ari/.vimperatorrc.local
+
+" vim: set ft=vimperator:

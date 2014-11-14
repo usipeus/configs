@@ -1,7 +1,8 @@
 URxvt*loginShell: true
 
-URxvt*font:			xft:terminus:size=11
-URxvt*boldFont:		xft:terminus:bold:size=11
+URxvt*font:			xft:vt323:size=13
+URxvt*boldFont:		xft:vt323:bold:size=13
+
 URxvt.allow_bold:	true
 
 ! ! black

@@ -19,7 +19,7 @@ set $mod Mod4
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
-font pango:Terminus 9
+font pango:VT323 12
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -200,8 +200,8 @@ set $background #3F3F3F
 
 # useful keybinds
 bindsym XF86AudioMute exec "$HOME/bin/notify_volume toggle"
-bindsym XF86AudioLowerVolume exec "$HOME/bin/notify_volume decrease"
-bindsym XF86AudioRaiseVolume exec "$HOME/bin/notify_volume increase"
+bindsym XF86AudioLowerVolume exec "amixer set Master 2%- -q"
+bindsym XF86AudioRaiseVolume exec "amixer set Master 2%+ -q"
 
 # Client colors
 # colorclass			<border>	<bg>		<text>		<indicator>
@@ -214,8 +214,11 @@ client.urgent			$background	$background	$color02	$color10
 # finds out, if available)
 bar {
 	status_command /home/ari/.i3/conky-i3bar
-	mode dock
-	font pango:Terminus 9
+	# mode dock
+	mode hide
+	hidden_state hide
+	modifier Mod1
+	font pango:VT323 12
 	
 	colors {
 
@@ -237,6 +240,11 @@ workspace_auto_back_and_forth no
 focus_follows_mouse no
 # force_xinerama yes
 
+#
+for_window [class="steam"] floating enable
+for_window [class="pavucontrol"] floating enable
+for_window [class="banshee"] floating enable
+
 # set workspaces to different monitors
 workspace 1 output DVI-I-1
 workspace 2 output DVI-I-1
@@ -250,9 +258,9 @@ workspace "9: mail" output DVI-I-1
 workspace 10 output DVI-I-1
 
 # run stuff
+exec copyStart
 exec lxsession
 exec nitrogen --restore
 exec /home/ari/Documents/scripts/mouse
 exec /home/ari/Downloads/xflux -z 61801
-exec copyStart
 exec conky

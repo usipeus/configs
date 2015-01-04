@@ -1,11 +1,14 @@
 :set tabstop=4
+:set shiftwidth=4
 :set number
 :set colorcolumn=80
 :set background=dark
 :color molokai
-:set gfn=Inconsolata\ Medium\ 12
+:set gfn=Anonymous\ Pro\ 12
 :set wrap!
-:set ai!
+:set autoindent!
+:set nocindent!
+:set nosmartindent!
 :syn enable
 filetype plugin indent on
 set encoding=utf-8
@@ -28,11 +31,6 @@ nnoremap <Down> <C-w>j
 nnoremap ; :
 nnoremap : ;
 
-" powerline stuff
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-
-" Always show statusline
-set laststatus=2
-
 " Set default size
-set columns=85 lines=50
+set columns=85
+set lines=35

@@ -1,3 +1,5 @@
+:set listchars=eol:$,tab:>_,trail:~,extends:>,precedes:<
+:set list
 :set tabstop=4
 :set shiftwidth=4
 :set number

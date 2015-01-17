@@ -1,6 +1,6 @@
 " :set listchars=eol:$,tab:>_,trail:~,extends:>,precedes:<
-:set listchars=eol:¶,tab:»·,trail:~,extends:>
-:set list
+set listchars=eol:¶,tab:»·,trail:~,extends:>,precedes:<
+set list
 :set tabstop=4
 :set shiftwidth=4
 :set number

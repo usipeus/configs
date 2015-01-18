@@ -1,0 +1,11 @@
+#!/bin/sh
+
+WID=$(pfw)
+ROOT=$(lsw -r)
+
+SW=$(wattr w $ROOT)
+SH=$(wattr h $ROOT)
+
+NH=$((SH/2))
+
+wtp 0 $NH $SW $((NH-8)) $WID

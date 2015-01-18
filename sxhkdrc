@@ -1,0 +1,24 @@
+# spawning programs
+alt + Return
+	urxvt
+alt + d
+	dmenu_run
+
+# window control
+# super + r : {h,j,k,l}
+
+alt + shift + {h,l,k,j,y,u,b,n}
+	/home/ari/wmsc/wmutils-tile-{left,right,top,bot,tl,tr,bl,br}
+
+alt + m : {h, l}
+	/home/ari/wmsc/wmutils-move-horiz {-10,10}
+
+alt + m : {j, k}
+	/home/ari/wmsc/wmutils-move-vert {10,-10}
+
+alt + shift + q
+	/home/ari/wmsc/wmutils-kill-current
+
+alt + c
+	/home/ari/wmsc/wmutils-center-current
+# mouse stuff

@@ -1,0 +1,8 @@
+jhbuildrc:	~/.config/jhbuildrc
+.i3:		~/.i3/
+.nanorc:	~/.nanorc
+.surf:		~/.surf/
+.vim:		~/.vim/
+.vimrc:		~/.vimrc
+.vimperatorrc:	~/.vimperatorrc
+.Xresources:	~/.Xresources

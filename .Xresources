@@ -1,46 +1,53 @@
-URxvt*loginShell: true
+! urxvt - built on https://github.com/okubax/dotfiles
+!URxvt.background: #101010
+!URxvt.foreground: #999993
+!URxvt.cursorColor: #395573
+!URxvt.cursorColor: #676767
+!URxvt.borderColor: #101010
+!URxvt.colorUL: #31658C
+URxvt.borderless: false
+URxvt.internalBorder: 3
+URxvt.externalBorder: 3
+URxvt.scrollBar: false
+URxvt.font: xft:input\ mono:pixelsize=12:antialias=true
+URxvt.boldFont: xft:input\ mono:bold:pixelsize=12:antialias=true
+URxvt.letterSpace: -1
 
-URxvt*font:			xft:terminus:size=10
-URxvt*boldFont:		xft:terminus:bold:size=10
+! transparency
+!URxvt.transparent: true
+!URxvt.tintColor: #101010
+!URxvt.shading: 4
 
-URxvt.allow_bold:	true
+! clickable urls
+URxvt.perl-ext-common: default,matcher,selection-to-clipboard
+URxvt.url-launcher: /usr/bin/palemoon
+URxvt.matcher.button: 1
 
-! Zenburn color-scheme                                                                                                         
-URxvt*background: #3F3F3F                                                                                                      
-URxvt*foreground: #DCDCCC                                                                                                      
-URxvt*cursorColor: #DCDCCC                                                                                                     
-URxvt*cursorColor2: #FFFFEF                                                                                                    
-URxvt*colorUL: #8CD0D3                                                                                                         
-URxvt*underlineColor: #F0DFAF                                                                                                  
-URxvt*colorBD: #E0CF9F                                                                                                         
-URxvt*colorIT: #656555                
+! tabs
+URxvt.tabbed.tabbar-bg: -1
+URxvt.tabbed.tabbar-fg: -2
+URxvt.tabbed.tab-bg: -2
+URxvt.tabbed.tab-fg: -1
+URxvt.tabbed.title-bg: -1
+URxvt.tabbed.title-fg: -2
+URxvt.tabbed.autohide: true
+URxvt.tabbed.new-button: false
+URxvt.tabbed.title: true
 
-!! black dark/light                                                                                                            
-URxvt*color0: #3F3F3F                                                                                                          
-URxvt*color8: #5F5F5F                                                                                                          
-!! red dark/light                                                                                                              
-URxvt*color1: #BC8383                                                                                                          
-URxvt*color9: #CC9393                                                                                                          
-!! green dark/light                                                                                                            
-URxvt*color2: #5F7F5F                                                                                                          
-URxvt*color10: #7F9F7F                                                                                                         
-!! yellow dark/light                                                                                                           
-URxvt*color3: #E0CF9F                                                                                                          
-URxvt*color11: #F0DFAF                                                                                                         
-!! blue dark/light                                                                                                             
-URxvt*color4: #7CB8BB                                                                                                          
-URxvt*color12: #8CD0D3                                                                                                         
-!! magenta dark/light                                                                                                          
-URxvt*color5: #DC8CC3                                                                                                          
-URxvt*color13: #DC8CC3                                                                                                         
-!! cyan dark/light                                                                                                             
-URxvt*color6: #93E0E3                                                                                                          
-URxvt*color14: #93E0E3                                                                                                         
-!! white dark/light                                                                                                            
-URxvt*color7: #DCDCCC                                                                                                          
-URxvt*color15: #FFFFFF
 
-! dzen2 stuff
-dzen2.font: xft:Terminus:size=9
-dzen2.background: black
-dzen2.foreground: #2aa198
+! colours
+!#include "/home/ylli2/.colors/gaseg"
+!#include "/home/ylli2/.colors/rb15"
+!#include "/home/ylli2/.colors/jsch"
+!#include "/home/ylli2/.colors/s3r0"
+!#include "/home/ylli2/.colors/hund"
+#include "/home/ylli2/.colors/coral"
+ 
+! fonts
+Xft.dpi:        96
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintslight
+
+

@@ -5,7 +5,7 @@
 :set colorcolumn=80
 :set background=dark
 :color molokai
-:set gfn=Anonymous\ Pro\ 12
+:set gfn=Input\ Mono\ 10
 :set wrap!
 :set autoindent!
 :set nocindent!
@@ -33,7 +33,3 @@ nnoremap <Down> <C-w>j
 " set the colon bind to semicolon and vice versa
 nnoremap ; :
 nnoremap : ;
-
-" Set default size
-set columns=85
-set lines=35

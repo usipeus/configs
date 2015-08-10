@@ -6,3 +6,4 @@ jhbuildrc:	~/.config/jhbuildrc
 .vimrc:		~/.vimrc
 .vimperatorrc:	~/.vimperatorrc
 .Xresources:	~/.Xresources
+mpd/:		~/.config/mpd/

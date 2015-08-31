@@ -12,7 +12,7 @@
 :set nosmartindent!
 :syn enable
 :set list
-:set listchars=eol:¶,tab:»·,trail:~,extends:>,precedes:<
+:set listchars=tab:»·,trail:~,extends:>,precedes:<
 filetype plugin indent on
 set encoding=utf-8
 

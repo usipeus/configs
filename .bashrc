@@ -17,3 +17,5 @@ PATH="`ruby -e 'puts Gem.user_dir'`/bin:$PATH"
 export EDITOR="nano"
 
 PATH=$PATH:~/.local/bin
+
+complete -c sudo

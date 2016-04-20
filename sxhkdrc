@@ -1,24 +1,26 @@
 # spawning programs
-alt + Return
+mod4 + Return
 	urxvt
-alt + d
+mod4 + d
 	dmenu_run
 
 # window control
 # super + r : {h,j,k,l}
 
-alt + shift + {h,l,k,j,y,u,b,n}
-	/home/ari/wmsc/wmutils-tile-{left,right,top,bot,tl,tr,bl,br}
+mod4 + shift + {h,l,k,j,y,u,b,n}
+	/home/ylli2/Downloads/source/configs/wmsc/wmutils-tile-{left,right,top,bot,tl,tr,bl,br}
 
-alt + m : {h, l}
-	/home/ari/wmsc/wmutils-move-horiz {-10,10}
+mod4 + {h,l}
+	/home/ylli2/Downloads/source/configs/wmsc/wmutils-move-horiz {-10,10}
 
-alt + m : {j, k}
-	/home/ari/wmsc/wmutils-move-vert {10,-10}
+mod4 + {j,k}
+	/home/ylli2/Downloads/source/configs/wmsc/wmutils-move-vert {10,-10}
 
-alt + shift + q
-	/home/ari/wmsc/wmutils-kill-current
+mod4 + shift + q
+	/home/ylli2/Downloads/source/configs/wmsc/wmutils-kill-current
 
-alt + c
-	/home/ari/wmsc/wmutils-center-current
-# mouse stuff
+mod4 + c
+	/home/ylli2/Downloads/source/configs/wmsc/wmutils-center-current
+
+mod4 + f
+	pfw | /home/ylli2/Downloads/source/contrib/fullscreen.sh

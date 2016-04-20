@@ -9,3 +9,4 @@ SW=$(wattr w $ROOT)
 SH=$(wattr h $ROOT)
 
 wtp $(((SW - WW)/2)) $(((SH - WH)/2)) $WW $WH $WID
+chwso -r $WID

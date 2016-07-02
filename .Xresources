@@ -1,53 +1,27 @@
-! urxvt - built on https://github.com/okubax/dotfiles
-!URxvt.background: #101010
-!URxvt.foreground: #999993
-!URxvt.cursorColor: #395573
-!URxvt.cursorColor: #676767
-!URxvt.borderColor: #101010
-!URxvt.colorUL: #31658C
-URxvt.borderless: false
-URxvt.internalBorder: 3
-URxvt.externalBorder: 3
-URxvt.scrollBar: false
-URxvt.font: xft:input\ mono:pixelsize=12:antialias=true
-URxvt.boldFont: xft:input\ mono:bold:pixelsize=12:antialias=true
-URxvt.letterSpace: -1
+! Molokai theme
+*urxvt*background: #101010
+*urxvt*foreground: #d0d0d0
+*urxvt*cursorColor: #d0d0d0
+*urxvt*color0: #101010
+*urxvt*color1: #960050
+*urxvt*color2: #66aa11
+*urxvt*color3: #c47f2c
+*urxvt*color4: #30309b
+*urxvt*color5: #7e40a5
+*urxvt*color6: #3579a8
+*urxvt*color7: #9999aa
+*urxvt*color8: #303030
+*urxvt*color9: #ff0090
+*urxvt*color10: #80ff00
+*urxvt*color11: #ffba68
+*urxvt*color12: #5f5fee
+*urxvt*color13: #bb88dd
+*urxvt*color14: #4eb4fa
+*urxvt*color15: #d0d0d0
 
-! transparency
-!URxvt.transparent: true
-!URxvt.tintColor: #101010
-!URxvt.shading: 4
+! font
+urxvt.font:xft:metis:size=12
+urxvt.boldFont:xft:metis:size=12
 
-! clickable urls
-URxvt.perl-ext-common: default,matcher,selection-to-clipboard
-URxvt.url-launcher: /usr/bin/palemoon
-URxvt.matcher.button: 1
-
-! tabs
-URxvt.tabbed.tabbar-bg: -1
-URxvt.tabbed.tabbar-fg: -2
-URxvt.tabbed.tab-bg: -2
-URxvt.tabbed.tab-fg: -1
-URxvt.tabbed.title-bg: -1
-URxvt.tabbed.title-fg: -2
-URxvt.tabbed.autohide: true
-URxvt.tabbed.new-button: false
-URxvt.tabbed.title: true
-
-
-! colours
-!#include "/home/ylli2/.colors/gaseg"
-!#include "/home/ylli2/.colors/rb15"
-!#include "/home/ylli2/.colors/jsch"
-!#include "/home/ylli2/.colors/s3r0"
-!#include "/home/ylli2/.colors/hund"
-#include "/home/ylli2/.colors/coral"
- 
-! fonts
-Xft.dpi:        96
-Xft.antialias:  true
-Xft.rgba:       rgb
-Xft.hinting:    true
-Xft.hintstyle:  hintslight
-
-
+! other settings
+urxvt.scrollBar: false

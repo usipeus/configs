@@ -211,3 +211,4 @@ exec xrdb .Xresources
 exec dropbox start
 exec nitrogen --restore
 exec redshift_fremont.sh
+exec yabar -c /home/ylli2/Downloads/configs/yabar.conf

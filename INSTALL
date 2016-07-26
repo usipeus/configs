@@ -7,3 +7,4 @@ jhbuildrc:	~/.config/jhbuildrc
 .vimperatorrc:	~/.vimperatorrc
 .Xresources:	~/.Xresources
 mpd/:		~/.config/mpd/
+Monokai.colorscheme: ~/.local/share/konsole

@@ -1,7 +1,13 @@
+" dark solarized
+syntax enable
+set background=dark
+colorscheme solarized
+
 set wrap
 set tabstop=4
 set shiftwidth=4
-set number
+set softtabstop=4
+set nonumber
 set colorcolumn=80
 set autoindent!
 set nocindent!

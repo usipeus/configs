@@ -1,8 +1,3 @@
-" dark solarized
-" syntax enable
-" set background=dark
-" colorscheme solarized
-
 " vundle things
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -22,6 +17,12 @@ Plugin 'nelstrom/vim-markdown-folding'
 
 Plugin 'beloglazov/vim-online-thesaurus'
 
+Plugin 'reedes/vim-colors-pencil'
+
+Plugin 'vim-airline/vim-airline'
+
+Plugin 'vim-airline/vim-airline-themes'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -38,6 +39,24 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" theme
+syntax enable
+set background=dark
+colorscheme molokai
+" colorscheme pencil
+
+" airline themes
+AirlineTheme molokai
+let g:airline_powerline_fonts=1
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ''
 
 set spell spelllang=en_us
 set wrap

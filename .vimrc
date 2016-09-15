@@ -19,10 +19,6 @@ Plugin 'beloglazov/vim-online-thesaurus'
 
 Plugin 'reedes/vim-colors-pencil'
 
-Plugin 'vim-airline/vim-airline'
-
-Plugin 'vim-airline/vim-airline-themes'
-
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,17 +42,9 @@ set background=dark
 colorscheme molokai
 " colorscheme pencil
 
-" airline themes
-AirlineTheme molokai
-let g:airline_powerline_fonts=1
-" powerline symbols
-let g:airline_left_sep = ''
-let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
-let g:airline_right_alt_sep = ''
-let g:airline_symbols.branch = ''
-let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = ''
+" powerline
+set rtp+=/home/ylli2/.local/lib/python2.7/site-packages/powerline/bindings/vim/
+set laststatus=2
 
 set spell spelllang=en_us
 set wrap
@@ -65,7 +53,7 @@ set shiftwidth=8
 set softtabstop=8
 set noexpandtab
 set nonumber
-set colorcolumn=80
+set colorcolumn=0
 set autoindent!
 set nocindent!
 set nosmartindent!
@@ -90,3 +78,10 @@ nnoremap <Right> <C-w>l
 nnoremap <Left> <C-w>h
 nnoremap <Up> <C-w>k
 nnoremap <Down> <C-w>j
+set splitbelow
+set splitright
+" better buffers
+:nnoremap <F5> :buffers<CR>:buffer<Space>
+set hidden
+nnoremap <C-N> :bnext<CR>
+nnoremap <C-P> :bprev<CR>

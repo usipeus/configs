@@ -1,7 +1,7 @@
 " theme
-syntax enable
 set background=dark
 colorscheme molokai
+syntax enable
 " colorscheme pencil
 
 set wrap

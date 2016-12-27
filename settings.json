@@ -2,10 +2,10 @@
     "autoclose": true,
     "autoindent": true,
     "autosave": false,
-    "colorcolumn": 80,
-    "colorscheme": "monokai",
+    "colorcolumn": 0,
+    "colorscheme": "default",
     "cursorline": true,
-    "eofnewline": false,
+    "eofnewline": true,
     "ignorecase": false,
     "indentchar": " ",
     "infobar": true,
@@ -15,7 +15,7 @@
         "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
     ],
     "pluginrepos": [],
-    "rmtrailingws": false,
+    "rmtrailingws": true,
     "ruler": true,
     "savecursor": false,
     "saveundo": false,
@@ -26,36 +26,32 @@
     "splitRight": true,
     "statusline": true,
     "syntax": true,
-    "tabsize": 4,
-    "tabstospaces": true,
-
-    "*.c": {
-    	"tabstospaces": false,
-    	"tabsize": 8
-    },
-
-    "*.cpp": {
-    	"tabstospaces": false,
-    	"tabsize": 8
-    }
-
-	"*.h": {
-    	"tabstospaces": false,
-    	"tabsize": 8
-    }
-
-    "*.hpp": {
-    	"tabstospaces": false,
-    	"tabsize": 8
-    }
-
-	"*.go": {
-		"tabstospaces": false,
-		"cabsize": 8
-	}
 
     "*.rb": {
-    	"tabsize": 2
-    }
+        "tabsize": 2
+    },
+    "*.c": {
+        "tabsize": 8,
+        "tabstospaces": false
+    },
+    "*.cpp": {
+        "tabsize": 8,
+        "tabstospaces": false
+    },
+    "*.h": {
+        "tabsize": 8,
+        "tabstospaces": false
+    },
+    "*.hpp": {
+        "tabsize": 8,
+        "tabstospaces": false
+    },
+    "*.go": {
+        "tabsize": 8,
+        "tabstospaces": false
+    },
 
+    "tabsize": 4,
+    "tabstospaces": false,
+    "CtrlR": "redo"
 }

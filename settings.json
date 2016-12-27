@@ -1,0 +1,61 @@
+{
+    "autoclose": true,
+    "autoindent": true,
+    "autosave": false,
+    "colorcolumn": 80,
+    "colorscheme": "monokai",
+    "cursorline": true,
+    "eofnewline": false,
+    "ignorecase": false,
+    "indentchar": " ",
+    "infobar": true,
+    "keepautoindent": false,
+    "linter": true,
+    "pluginchannels": [
+        "https://raw.githubusercontent.com/micro-editor/plugin-channel/master/channel.json"
+    ],
+    "pluginrepos": [],
+    "rmtrailingws": false,
+    "ruler": true,
+    "savecursor": false,
+    "saveundo": false,
+    "scrollmargin": 3,
+    "scrollspeed": 2,
+    "softwrap": false,
+    "splitBottom": true,
+    "splitRight": true,
+    "statusline": true,
+    "syntax": true,
+    "tabsize": 4,
+    "tabstospaces": true,
+
+    "*.c": {
+    	"tabstospaces": false,
+    	"tabsize": 8
+    },
+
+    "*.cpp": {
+    	"tabstospaces": false,
+    	"tabsize": 8
+    }
+
+	"*.h": {
+    	"tabstospaces": false,
+    	"tabsize": 8
+    }
+
+    "*.hpp": {
+    	"tabstospaces": false,
+    	"tabsize": 8
+    }
+
+	"*.go": {
+		"tabstospaces": false,
+		"cabsize": 8
+	}
+
+    "*.rb": {
+    	"tabsize": 2
+    }
+
+}

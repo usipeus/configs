@@ -15,6 +15,8 @@ if dein#load_state('/home/ylli2/.config/nvim/dein/')
   call dein#add('/home/ylli2/.config/nvim/dein//repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
+  call dein#add('Shougo/deoplete.nvim')
+  call dein#add('artur-shaik/vim-javacomplete2')
   call dein#add('Shougo/neosnippet.vim')
   call dein#add('Shougo/neosnippet-snippets')
   call dein#add('vim-scripts/Smart-Tabs')
@@ -45,7 +47,7 @@ set list listchars=tab:»·,trail:·
 set background=dark
 colorscheme molokai
 syntax enable
-" colorscheme pencil
+set colorcolumn=80
 
 set noet ci pi sts=0 sw=4 ts=4
 set wrap
@@ -81,4 +83,12 @@ set splitright
 set hidden
 nnoremap <C-N> :bnext<CR>
 nnoremap <C-P> :bprev<CR>
+
+" auto run deoplete
+let g:deoplete#enable_at_startup = 1
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+
+" javacomplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 

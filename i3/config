@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Fira Mono 8
+font pango:metis 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -31,7 +31,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
-bindsym $mod+Shift+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -126,7 +125,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -137,8 +136,8 @@ mode "resize" {
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
         bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
@@ -152,42 +151,35 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
 bindsym $mod+Ctrl+h resize shrink width 10 px or 2 ppt
 bindsym $mod+Ctrl+k resize grow height 10 px or 2 ppt
 bindsym $mod+Ctrl+j resize shrink height 10 px or 2 ppt
 bindsym $mod+Ctrl+l resize grow width 10 px or 2 ppt
 
+bindsym $mod+r mode "resize"
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-# bar {
-	# status_command i3status
-	# mode dock
-
-	# colors {
-
-        # background #000000
-        # statusline #ddeedd
-
-        # focused_workspace  #ffffff #66AABB
-        # active_workspace   #ffffff #3A526B
-        # inactive_workspace #888888 #222222
-        # urgent_workspace   #ffffff #F26B9E
-	# }
-# }
-
-# misc stuff
-
-for_window [class="steam"] floating enable
-for_window [class="teamspeak3"] floating enable
-for_window [class="pavucontrol"] floating enable
-for_window [class="banshee"] floating enable
+bar {
+  status_command i3status
+	    mode dock
+  colors {
+    separator #333333
+    background #2c001e
+    statusline #aea79f
+    focused_workspace #dd4814 #dd4814 #ffffff
+    active_workspace #902a07 #902a07 #aea79f
+    inactive_workspace #902a07 #902a07 #aea79f
+    urgent_workspace #77216f #77216f #ffffff
+  }
+}
 
 # useful keybinds
-bindsym XF86AudioMute exec "$HOME/bin/notify_volume toggle"
 bindsym XF86AudioLowerVolume exec "amixer set Master 2%- -q"
 bindsym XF86AudioRaiseVolume exec "amixer set Master 2%+ -q"
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # other settings
 hide_edge_borders none
@@ -195,13 +187,14 @@ new_window pixel 4
 new_float pixel 4
 workspace_auto_back_and_forth no
 focus_follows_mouse no
-# force_xinerama yes
 
 # run stuff
 exec xrdb -merge .Xresources
-exec copy_start.sh
-exec dropbox
-exec lxsession
-exec nitrogen --restore
-exec /home/ylli2/Downloads/xflux -z 94539
-exec conky
+exec redshift_urbana.sh
+exec google-drive-ocamlfuse ~/Google\ Drive/
+exec nm-applet
+
+client.focused #dd4814 #dd4814 #ffffff #902a07
+client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750
+client.unfocused #5e2750 #5e2750 #aea79f #5e2750
+client.urgent #77216f #77216f #ffffff #efb73e

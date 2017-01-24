@@ -93,8 +93,17 @@
 
 
 ! font
-urxvt.font:xft:metis:size=12
-urxvt.boldFont:xft:metis:size=12
+urxvt.font:xft:clean:size=8
+urxvt.boldFont:xft:clean:size=8
 
 ! other settings
 urxvt.scrollBar: false
+
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+URxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0

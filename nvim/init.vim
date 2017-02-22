@@ -58,10 +58,10 @@ set noautoindent!
 set nosmartindent!
 syn enable
 filetype plugin indent on
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
 
 " keybindings
 nnoremap ; :
-nnoremap : ;
 " disable the arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>

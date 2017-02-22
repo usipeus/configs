@@ -59,6 +59,7 @@ set nosmartindent!
 syn enable
 filetype plugin indent on
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 0
+set mouse=a
 
 " keybindings
 nnoremap ; :

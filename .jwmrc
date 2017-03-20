@@ -210,13 +210,12 @@
     <Key mask="4" key="Left">maxleft</Key>
     <Key mask="4" key="Up">maxtop</Key>
     <Key mask="4" key="Down">maxbottom</Key>
-    <Key mask="4" key="d">exec:dmenu_run</Key>
-    <Key mask="4S" key="d">exec:i3-dmenu-desktop</Key>
     <Key mask="4" key="f">exec:pcmanfm</Key>
     <Key mask="4" key="t">exec:urxvt</Key>
     <Key mask="4S" key="t">exec:terminator</Key>
+    <Key mask="4" key="d">exec:rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"</Key>
 
-	<RestartCommand>nitrogen --restore</StartupCommand>
+	<RestartCommand>nitrogen --restore</RestartCommand>
 
 	<StartupCommand>redshift_urbana.sh</StartupCommand>
 	<StartupCommand>nm-applet</StartupCommand>

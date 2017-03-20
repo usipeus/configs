@@ -31,14 +31,13 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec urxvt
+bindsym $mod+Shift+Return exec hyper_run.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-bindsym $mod+shift+d exec --no-startup-id i3-dmenu-desktop
+# rofi
+bindsym $mod+d exec rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"</Key>
 
 # change focus
 bindsym $mod+h focus left
@@ -195,8 +194,8 @@ exec xrdb -merge .Xresources
 exec redshift_urbana.sh
 exec google-drive-ocamlfuse ~/Google\ Drive/
 exec nm-applet
+exec blueman-applet
 exec nitrogen --restore
-exec rofi -key-run mod4+d -fuzzy -font "Go Mono 14"
 
 client.focused #dd4814 #dd4814 #ffffff #902a07
 client.focused_inactive #5e2750 #5e2750 #aea79f #5e2750

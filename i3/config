@@ -37,7 +37,7 @@ bindsym $mod+Shift+Return exec hyper_run.sh
 bindsym $mod+Shift+q kill
 
 # rofi
-bindsym $mod+d exec rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"</Key>
+bindsym $mod+d exec rofirun
 
 # change focus
 bindsym $mod+h focus left

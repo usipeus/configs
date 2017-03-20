@@ -1,0 +1,4 @@
+#!/bin/bash
+
+rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"
+

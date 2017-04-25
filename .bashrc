@@ -116,11 +116,25 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# mp3 directory
-MP3=/home/ylli2/Downloads/source/ece391/ece391_share/work/mp3
+# set prompt
+PS1="X220 $ "
 
-# powerline
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
+# set gopath
+export GOPATH=$HOME/code/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+
+[[ $COLORTERM = gnome-terminal ]] && TERM=xterm-256color
+
+# add cs463 path variable
+CS463=/home/ylli2/code/cs463/
+
+export VOLATILITYPATH=/home/ylli2/code/volatility_2.6_lin64_standalone
+export PATH=$PATH:$VOLATILITYPATH
+
+TZ=:/etc/localtime
+
+PLAN9=/usr/local/plan9 export PLAN9
+PATH=$PATH:$PLAN9/bin export PATH
+alias acme="acme -a -f /usr/local/plan9/font/fixed/unicode.8x13B.font"
+
+. /home/ylli2/.local/lib/python3.5/site-packages/powerline/bindings/bash/powerline.sh

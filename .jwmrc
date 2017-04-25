@@ -213,13 +213,12 @@
     <Key mask="4" key="f">exec:pcmanfm</Key>
     <Key mask="4" key="t">exec:urxvt</Key>
     <Key mask="4S" key="t">exec:terminator</Key>
-    <Key mask="4" key="d">exec:rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"</Key>
+    <Key mask="4" key="d">exec:rofirun</Key>
 
 	<RestartCommand>nitrogen --restore</RestartCommand>
-
 	<StartupCommand>redshift_urbana.sh</StartupCommand>
 	<StartupCommand>nm-applet</StartupCommand>
 	<StartupCommand>blueman-applet</StartupCommand>
 	<StartupCommand>nitrogen --restore</StartupCommand>
-	<StartupCommand>slack</StartupCommand>
+	<StartupCommand>cbatticon -r 15 -l 30</StartupCommand>
 </JWM>

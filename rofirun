@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Go Mono 14"
+rofi -modi combi -show combi -combi-modi run,drun -fuzzy -font "Iosevka Term 14"
 

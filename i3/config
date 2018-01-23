@@ -198,7 +198,7 @@ exec /home/usipeus/local/bin/polybar_launch.sh
 # exec nitrogen --restore
 # exec cbatticon -r 15 -l 30
 
-client.focused #859900 #859900 #fdf6e3 #6c71c4
-client.focused_inactive #073642 #073642 #eee8d5 #6c71c4
-client.unfocused #073642 #073642 #93a1a1 #586e75
-client.urgent #d33682 #d33682 #fdf6e3 #dc322f
+client.focused          #5e81ac #3b4252 #eceff4 #b48ead #5e81ac
+client.focused_inactive #eceff4 #3b4252 #d9dee9 #b48ead #88c0d0
+client.unfocused        #4c566a #3b4252 #d9dee9 #b48ead #4c566a
+client.urgent           #d08770 #3b4252 #eceff4 #b48ead #d09770

@@ -45,7 +45,7 @@ set list listchars=tab:»·,trail:·
 
 " theme
 set background=dark
-colorscheme molokai
+colorscheme nord
 syntax enable
 set colorcolumn=80
 

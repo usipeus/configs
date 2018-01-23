@@ -1,11 +1,27 @@
 /* See LICENSE file for copyright and license details. */
+#define nord0 "#2E3440"
+#define nord1 "#3B4252"
+#define nord2 "#434C5E"
+#define nord3 "#4C566A"
+#define nord4 "#D8DEE9"
+#define nord5 "#E5E9F0"
+#define nord6 "#ECEFF4"
+#define nord7 "#8FBCBB"
+#define nord8 "#88C0D0"
+#define nord9 "#81A1C1"
+#define nord10 "#5E81AC"
+#define nord11 "#BF616A"
+#define nord12 "#D08770"
+#define nord13 "#EBCB8B"
+#define nord14 "#A3BE8C"
+#define nord15 "#B48EAD"
 
 /*
  * appearance
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-char font[] = "fira mono:pixelsize=14:antialias=true:autohint=true";
+char font[] = "tamzen:pixelsize=12:antialias=true:autohint=true";
 int borderpx = 2;
 
 /*
@@ -86,22 +102,22 @@ static unsigned int tabspaces = 8;
 const char *colorname[] = {
 	/* monokai */
 	
-	"#272822",  /*  0: black    */
-	"#f92672",  /*  1: red      */
-	"#a6e22e",  /*  2: green    */
-	"#ffd866",  /*  3: yellow   */
-	"#3e87be",  /*  4: blue     */
-	"#ab9df2",  /*  5: magenta  */
-	"#6dd9ef",  /*  6: cyan     */
-	"#ffffff",  /*  7: white    */
-	"#272822",  /*  8: brblack  */
-	"#f92672",  /*  9: brred    */
-	"#a6e22e",  /* 10: brgreen  */
-	"#ffd866",  /* 11: bryellow */
-	"#3e87be",  /* 12: brblue   */
-	"#ab9df2",  /* 13: brmagenta*/
-	"#6dd9ef",  /* 14: brcyan   */
-	"#ffffff",  /* 15: brwhite  */
+	nord1,  /*  0: black    */
+	nord11,  /*  1: red      */
+	nord14,  /*  2: green    */
+	nord13,  /*  3: yellow   */
+	nord9,  /*  4: blue     */
+	nord15,  /*  5: magenta  */
+	nord8,  /*  6: cyan     */
+	nord5,  /*  7: white    */
+	nord3,  /*  8: brblack  */
+	nord11,  /*  9: brred    */
+	nord14,  /* 10: brgreen  */
+	nord13,  /* 11: bryellow */
+	nord9,  /* 12: brblue   */
+	nord15,  /* 13: brmagenta*/
+	nord7,  /* 14: brcyan   */
+	nord6,  /* 15: brwhite  */
 };
 
 /*

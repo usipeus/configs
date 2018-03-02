@@ -31,8 +31,10 @@ command rofi rofirun
 bind XF86MonBrightnessDown cwm-brightness down
 bind XF86MonBrightnessUp   cwm-brightness up
 
+bind 4-Return lxterminal
+
 bind 4S-r    restart         # CWM controls
-bind 4S-q    quit
+bind C4MS-q    quit
 
 bind 4S-d     menusearch        # Launch "command" entries defined above.
 # bind 4-d      exec       # Launch anything in PATH.
@@ -94,3 +96,6 @@ mousebind 4-1    window_move     # Holding Win+left mouse moves window.
 mousebind 4-3    window_resize   # Right mouse resizes.
 
 # vim:ft=config
+bind CM-Return unmap
+bind CM-Delete unmap
+bind M-Return unmap

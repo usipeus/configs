@@ -1,6 +1,6 @@
 borderwidth 4
 snapdist    20
-gap         4 4 4 4               # Gap when maximizing. Top bottom left right.
+gap         40 4 4 4               # Gap when maximizing. Top bottom left right.
 sticky      yes                   # New windows will be in current group.
 moveamount  10                    # Pixels to move when using keyboard.
 
@@ -17,8 +17,9 @@ ignore polybar
 autogroup 9 polybar
 
 autogroup 1 Firefox
-autogroup 5 discord
-autogroup 6 slack
+autogroup 1 surf
+autogroup 9 discord
+autogroup 9 slack
 
 command firefox      firefox
 command pavucontrol  pavucontrol
@@ -34,7 +35,8 @@ bind 4S-r    restart         # CWM controls
 bind 4S-q    quit
 
 bind 4S-d     menusearch        # Launch "command" entries defined above.
-bind 4-d      exec       # Launch anything in PATH.
+# bind 4-d      exec       # Launch anything in PATH.
+bind 4-d      rofirun
 bind 4S-slash search    # Window search.
 bind 4-slash  menu_unhide
 bind 4-b      label # Assign label to window for searching.
@@ -66,11 +68,12 @@ bind 4-1     grouponly1    # Display *only* these groups, hiding
 bind 4-2     grouponly2    # everything else.
 bind 4-3     grouponly3
 bind 4-4     grouponly4
-bind 4-5     group5  # Toggle visibility; useful for e.g. chat
-bind 4-6     group6  # and other "temporary" windows.
-bind 4-7     group7
-bind 4-8     group8
-bind 4-9     group9
+bind 4-5     grouponly5  # Toggle visibility; useful for e.g. chat
+bind 4-6     grouponly6  # and other "temporary" windows.
+bind 4-7     grouponly7
+bind 4-8     grouponly8
+bind 4-9     grouponly9
+bind 4-0     grouponly10
 
 bind 4S-1      movetogroup1 # Assign windows to a group.
 bind 4S-2      movetogroup2
@@ -81,6 +84,7 @@ bind 4S-6      movetogroup6
 bind 4S-7      movetogroup7
 bind 4S-8      movetogroup8
 bind 4S-9      movetogroup9
+bind 4S-0      movetogroup10
 
 bind 4-s      sticky    # Stick window to all groups.
 

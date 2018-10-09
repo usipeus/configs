@@ -252,6 +252,9 @@ bindsym $mod+F8 exec mocp --next
 # Redirect sound to headphones
 bindcode $mod+58 exec "/usr/local/bin/switch-audio-port"
 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"

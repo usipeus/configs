@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 10
+font pango:fira mono 10
 
 # thin borders
 hide_edge_borders both
@@ -31,21 +31,22 @@ floating_modifier $mod
 # start a terminal
 bindsym $mod+Return exec termite
 
-# kill focused window
-bindsym $mod+Shift+q kill
+# kill focused window (q)
+bindcode $mod+Shift+24 kill
 
 # start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
+bindcode $mod+40 exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# use (d) key
+bindcode $mod+Shift+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindcode $mod+43 focus left
+bindcode $mod+44 focus down
+bindcode $mod+45 focus up
+bindcode $mod+46 focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -53,11 +54,11 @@ bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+# move focused window (hjkl)
+bindcode $mod+Shift+43 move left
+bindcode $mod+Shift+44 move down
+bindcode $mod+Shift+45 move up
+bindcode $mod+Shift+46 move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -65,19 +66,19 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+semicolon split h
+# split in horizontal orientation (semicolon)
+bindcode $mod+47 split h
 
-# split in vertical orientation
-bindsym $mod+v split v
+# split in vertical orientation (v)
+bindcode $mod+55 split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# enter fullscreen mode for the focused container (f)
+bindcode $mod+41 fullscreen toggle
 
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
-bindsym $mod+Shift+w layout tabbed
-bindsym $mod+Shift+e layout toggle split
+# change container layout (stacked, tabbed, toggle split) (swe)
+bindcode $mod+Shift+39 layout stacking
+bindcode $mod+Shift+25 layout tabbed
+bindcode $mod+Shift+26 layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -85,11 +86,11 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
+# focus the parent container (a)
+bindcode $mod+38 focus parent
 
-# focus the child container
-bindsym $mod+c focus child
+# focus the child container (c)
+bindcode $mod+54 focus child
 
 # switch to workspace
 bindsym $mod+1 workspace 1 code
@@ -104,32 +105,34 @@ bindsym $mod+9 workspace 9 misc
 bindsym $mod+0 workspace 10 chat
 
 # scratchpad stuff
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindcode $mod+Shift+20 move scratchpad
+bindcode $mod+20 scratchpad show
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace 1 code
+bindsym $mod+Shift+2 move container to workspace 2 code
+bindsym $mod+Shift+3 move container to workspace 3 web
+bindsym $mod+Shift+4 move container to workspace 4 docs
+bindsym $mod+Shift+5 move container to workspace 5 docs
+bindsym $mod+Shift+6 move container to workspace 6 file
+bindsym $mod+Shift+7 move container to workspace 7 misc
+bindsym $mod+Shift+8 move container to workspace 8 misc
+bindsym $mod+Shift+9 move container to workspace 9 misc
+bindsym $mod+Shift+0 move container to workspace 10 chat
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+# c
+bindcode $mod+Shift+54 reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+# r
+bindcode $mod+Shift+27 restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+z exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindcode $mod+Shift+52 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+Shift+x exec i3lock --color 475263
+bindcode $mod+Shift+53 exec i3lock --color 475263
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -139,10 +142,10 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym h resize shrink width 10 px or 10 ppt
-    bindsym j resize grow height 10 px or 10 ppt
-    bindsym k resize shrink height 10 px or 10 ppt
-    bindsym l resize grow width 10 px or 10 ppt
+    bindcode 43 resize shrink width 10 px or 10 ppt
+    bindcode 44 resize grow height 10 px or 10 ppt
+    bindcode 45 resize shrink height 10 px or 10 ppt
+    bindcode 46 resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -155,12 +158,12 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 
-bindsym $mod+Ctrl+h resize shrink width 10 px or 2 ppt
-bindsym $mod+Ctrl+k resize grow height 10 px or 2 ppt
-bindsym $mod+Ctrl+j resize shrink height 10 px or 2 ppt
-bindsym $mod+Ctrl+l resize grow width 10 px or 2 ppt
+bindcode $mod+Ctrl+43 resize shrink width 10 px or 2 ppt
+bindcode $mod+Ctrl+45 resize grow height 10 px or 2 ppt
+bindcode $mod+Ctrl+44 resize shrink height 10 px or 2 ppt
+bindcode $mod+Ctrl+46 resize grow width 10 px or 2 ppt
 
-bindsym $mod+r mode "resize"
+bindcode $mod+27 mode "resize"
 
 #set $bg-color            #3b4252
 #set $inactive-bg-color   #3b4252
@@ -188,7 +191,7 @@ client.urgent           $urgent-bg-color   $urgent-bg-color   $text-color       
 # finds out, if available)
 bar {
     status_command i3status
-    font pango:monospace 10
+    font pango:fira mono 10
 
     colors {
         background $inactive-bg-color
@@ -247,7 +250,7 @@ bindsym $mod+F7 exec mocp --previous
 bindsym $mod+F8 exec mocp --next
 
 # Redirect sound to headphones
-bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
+bindcode $mod+58 exec "/usr/local/bin/switch-audio-port"
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -261,4 +264,5 @@ exec --no-startup-id setxkbmap dvorak
 exec --no-startup-id /home/usipeus/.fehbg
 #exec --no-startup-id polybar_launch.sh
 exec --no-startup-id redshift
+exec --no-startup-id syncthing-gtk
 #exec blueman-applet

@@ -260,10 +260,8 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 #exec --no-startup-id "nitrogen --restore"
-exec --no-startup-id "sleep 2s && kalu"
-# run stuff
+#exec --no-startup-id "sleep 2s && kalu"
 exec --no-startup-id setxkbmap dvorak
-#exec --no-startup-id xset m 0/1 4
 exec --no-startup-id /home/usipeus/.fehbg
 #exec --no-startup-id polybar_launch.sh
 exec --no-startup-id redshift

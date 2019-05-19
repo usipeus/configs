@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# get current window ID
-WID=$(pfw)
-
-# move arg units
-wmv $1 0 $WID

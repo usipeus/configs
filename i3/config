@@ -247,11 +247,10 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "compton -cC"
+exec --no-startup-id "compton --vsync -cC"
 exec_always --no-startup-id flashfocus
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id polybar_launch.sh
 exec --no-startup-id ~/code/configs/generic-autostart
-#exec --no-startup-id wal -R
 exec --no-startup-id ~/.config/wpg/wp_init.sh

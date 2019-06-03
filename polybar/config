@@ -8,36 +8,32 @@
 ;=====================================================
 
 [colors]
-; monokai black
-background = #272822
-foreground = #dfdfdf
+; vending machine black
+background = #0c0d0d
+foreground = #e6cdc5
 
 ; default polybar example colors
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-; monokai colors from colorlovers
-loversred = #f92672
-loverscyan = #66d9ef
-loversgreen = #a6e22e
-loversorange = #fd971f
-
-# monokai colors from monokai pro
-prored = #ff6188
-proorange = #fc9867
-proyellow = #ffd866
-progreen = #a9dc76
-procyan = #78dce8
-propurple = #ab9df2
+; vending machine
+vmgrey = #514e4a
+vmlightgrey = #878386
+vmyellow = #b58b70
+vmred = #c75c50
+vmdarkbrown = #6c625c
+vmbrown = #946f63
+vmlightbrown = #a18f89
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
+bottom = false
 width = 100%
 height = 27
-;offset-x = 1%
+;offset-x = 0%
 ;offset-y = 1%
-radius = 6.0
+radius = 4.0
 fixed-center = false
 
 background = ${colors.background}
@@ -54,10 +50,9 @@ padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 2
-
-font-0 = "Misc Tamsyn:fontformat=truetype:size=8:antialias=true;0"
-font-1 = "Misc Tamsyn:fontformat=truetype:size=8:antialias=true;2"
-font-2 = "Misc Tamsyn:fontformat=truetype:size=8:antialias=true;1"
+font-0 = "SauceCodePro Nerd Font:fontformat=truetype:size=8:antialias=true;0"
+font-1 = "SauceCodePro Nerd Font:fontformat=truetype:size=8:antialias=true;2"
+font-2 = "SauceCodePro Nerd Font:fontformat=truetype:size=8:antialias=true;1"
 ; font-1 = Roboto:fontformat=truetype:size=8:2
 ; font-2 = "Noto Sans:size=10;1"
 
@@ -67,11 +62,11 @@ modules-right = filesystem volume xkeyboard memory cpu wlan eth battery temperat
 
 tray-position = right
 tray-padding = 2
-tray-transparent = true
+tray-transparent = false
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
-wm-restack = i3
+;wm-restack = i3
 
 ;override-redirect = true
 
@@ -94,15 +89,15 @@ blacklist-0 = num lock
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-prefix-underline = ${colors.propurple}
+format-prefix-underline = ${colors.vmlightgrey}
 
 label-layout = %layout%
-label-layout-underline = ${colors.propurple}
+label-layout-underline = ${colors.vmlightgrey}
 
 label-indicator-padding = 2
 label-indicator-margin = 1
-label-indicator-background = ${colors.propurple}
-label-indicator-underline = ${colors.propurple}
+label-indicator-background = ${colors.vmlightgrey}
+label-indicator-underline = ${colors.vmlightgrey}
 
 [module/filesystem]
 type = internal/fs
@@ -119,14 +114,14 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background}
-label-focused-underline= ${colors.propurple}
+label-focused-underline= ${colors.vmyellow}
 label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
 
 label-urgent = %index%!
-label-urgent-background = ${colors.loversred}
+label-urgent-background = ${colors.vmred}
 label-urgent-padding = 2
 
 label-empty = %index%
@@ -144,7 +139,7 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
-label-mode-background = ${colors.loversred}
+label-mode-background = ${colors.vmred}
 
 ; focused = Active workspace on focused monitor
 label-focused = %name%
@@ -207,7 +202,7 @@ type = internal/cpu
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.prored}
+format-underline = ${colors.vmlightbrown}
 label = %percentage:2%%
 
 [module/memory]
@@ -215,7 +210,7 @@ type = internal/memory
 interval = 2
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #4bffdc
+format-underline = ${colors.vmred}
 label = %percentage_used%%
 
 [module/wlan]
@@ -224,7 +219,7 @@ interface = wls3
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = ${colors.procyan}
+format-connected-underline = ${colors.vmlightgrey}
 label-connected = %essid%
 
 format-disconnected =
@@ -268,7 +263,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground}
-format-underline = ${colors.loversred}
+format-underline = ${colors.foreground}
 
 label = %date% %time%
 
@@ -284,13 +279,13 @@ format-muted-foreground = ${colors.foreground}
 label-muted = sound muted
 
 bar-volume-width = 10
-bar-volume-foreground-0 = ${colors.progreen}
-bar-volume-foreground-1 = ${colors.progreen}
-bar-volume-foreground-2 = ${colors.progreen}
-bar-volume-foreground-3 = ${colors.proyellow}
-bar-volume-foreground-4 = ${colors.proyellow}
-bar-volume-foreground-5 = ${colors.proorange}
-bar-volume-foreground-6 = ${colors.prored}
+bar-volume-foreground-0 = ${colors.vmlightbrown}
+bar-volume-foreground-1 = ${colors.vmlightbrown}
+bar-volume-foreground-2 = ${colors.vmbrown}
+bar-volume-foreground-3 = ${colors.vmbrown}
+bar-volume-foreground-4 = ${colors.vmbrown}
+bar-volume-foreground-5 = ${colors.vmdarkbrown}
+bar-volume-foreground-6 = ${colors.vmdarkbrown}
 bar-volume-gradient = false
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
@@ -307,7 +302,7 @@ adapter = ADP1
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = #ffb52a
+format-charging-underline = ${colors.vmyellow}
 
 format-discharging = <ramp-capacity> <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
@@ -333,13 +328,13 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = ${colors.progreen}
+format-underline = ${colors.vmred}
 format-warn = <ramp> <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature%
 label-warn = %temperature%
-label-warn-foreground = ${colors.loverscyan}
+label-warn-foreground = ${colors.vmgrey}
 
 ramp-0 = 
 ramp-1 = 
@@ -354,9 +349,9 @@ expand-right = true
 format-spacing = 1
 
 label-open = 
-label-open-foreground = ${colors.loversgreen}
+label-open-foreground = ${colors.vmlightgrey}
 label-close =  cancel
-label-close-foreground = ${colors.loversgreen}
+label-close-foreground = ${colors.vmlightgrey}
 label-separator = |
 label-separator-foreground = ${colors.foreground}
 
@@ -383,7 +378,7 @@ screenchange-reload = true
 ;compositing-border = over
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 40
+margin-bottom = 40
 
 ; vim:ft=dosini

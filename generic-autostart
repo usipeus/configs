@@ -1,0 +1,7 @@
+#!/bin/bash
+
+workman.sh dv &
+redshift-gtk &
+syncthing-gtk &
+xinput set-prop "Logitech M570" "libinput Accel Speed" -1 &
+

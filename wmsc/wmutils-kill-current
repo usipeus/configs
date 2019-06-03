@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# get current window id
-WID=$(pfw)
-
-# kill the current window
-
-killw $WID

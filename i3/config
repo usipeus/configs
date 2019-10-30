@@ -202,14 +202,14 @@ for_window [class="Kalu"] floating enable
 
 # other settings
 default_border pixel 2
-default_floating_border pixel 2
-#smart_borders on
-#smart_gaps on
-gaps inner 8
+default_floating_border pixel 0
+smart_borders on
+smart_gaps on
+gaps inner 4
 gaps outer 0
 hide_edge_borders none
-new_window pixel 4
-new_float pixel 4
+new_window pixel 2
+new_float pixel 2
 workspace_auto_back_and_forth no
 focus_follows_mouse no
 
@@ -247,8 +247,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 
 # Autostart apps
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "compton --vsync -cC"
-exec_always --no-startup-id flashfocus
+exec --no-startup-id "compton --vsync -GC"
+#exec_always --no-startup-id flashfocus
 exec --no-startup-id nm-applet
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id polybar_launch.sh
